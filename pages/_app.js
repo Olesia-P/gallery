@@ -1,4 +1,4 @@
-import css from "../styles/Home.module.scss";
+import css from "../styles/global.module.scss";
 import Navbar from "../components/Navbar/Navbar.js";
 
 function MyApp({ Component, pageProps }) {

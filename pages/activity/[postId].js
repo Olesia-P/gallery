@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import css from "../../styles/Home.module.scss";
+import css from "../../styles/global.module.scss";
 
 export default function Post() {
   const router = useRouter();

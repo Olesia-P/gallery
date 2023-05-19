@@ -1,20 +1,20 @@
 import Link from "next/link";
-import css from "/styles/Home.module.scss";
+import css from "/styles/global.module.scss";
 
 export default function Navbar({ postId = 365 }) {
   return (
     <nav className={css.nav}>
-      <Link href="/" className={css.link}>
-        <a>Home</a>
+      <Link href="/">
+        <a className={css.link}>Home</a>
       </Link>
-      <Link href="/about" className={css.link}>
-        <a>About</a>
+      <Link href="/about">
+        <a className={css.link}>About</a>
       </Link>
-      <Link href="/activity" className={css.link}>
-        <a>Activity</a>
+      <Link href="/activity">
+        <a className={css.link}>Activity</a>
       </Link>
-      <Link href={`/activity/${postId}`} className={css.link}>
-        <a>Posts</a>
+      <Link href={`/activity/${postId}`}>
+        <a className={css.link}>Posts</a>
       </Link>
     </nav>
   );
