@@ -1,9 +1,9 @@
-import css from "../styles/global.module.scss";
 import Navbar from "../components/Navbar/Navbar.js";
+import "../styles/global.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={css.Home}>
+    <div>
       <Navbar />
       <Component {...pageProps} />
     </div>

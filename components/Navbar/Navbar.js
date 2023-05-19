@@ -1,9 +1,9 @@
 import Link from "next/link";
-import css from "/styles/global.module.scss";
+import css from "./Navbar.module.scss";
 
 export default function Navbar({ postId = 365 }) {
   return (
-    <nav className={css.nav}>
+    <nav className={css.Navbar}>
       <Link href="/">
         <a className={css.link}>Home</a>
       </Link>
