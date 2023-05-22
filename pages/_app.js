@@ -1,41 +1,44 @@
 import Navbar from "../components/Navbar/Navbar.js";
 import "../styles/global.scss";
+import { createContext } from "react";
+
+export const PictureContext = createContext();
 
 function MyApp({ Component, pageProps }) {
-  const obj1 = {
-    img: "/img/picture1",
-    description: "notebook",
-    id: 1,
-  };
-
-  const obj2 = {
-    img: "/img/picture2",
-    description: "backpack",
-    id: 2,
-  };
-
-  const obj3 = {
-    img: "/img/picture3",
-    description: "forest",
-    id: 3,
-  };
-
-  const obj4 = {
-    img: "/img/picture4",
-    description: "field",
-    id: 4,
-  };
-
-  const obj5 = {
-    img: "/img/picture5",
-    description: "umbrella",
-    id: 5,
-  };
+  const pictures = [
+    {
+      img: "/img/picture1.jpg",
+      description: "notebook",
+      id: 1,
+    },
+    {
+      img: "/img/picture2.jpg",
+      description: "backpack",
+      id: 2,
+    },
+    {
+      img: "/img/picture3.jpg",
+      description: "forest",
+      id: 3,
+    },
+    {
+      img: "/img/picture4.jpg",
+      description: "field",
+      id: 4,
+    },
+    {
+      img: "/img/picture5.jpg",
+      description: "umbrella",
+      id: 5,
+    },
+  ];
 
   return (
     <div>
       <Navbar />
-      <Component {...pageProps} />
+      <PictureContext.Provider value={{ pictures }}>
+        <Component {...pageProps} />
+      </PictureContext.Provider>
     </div>
   );
 }
