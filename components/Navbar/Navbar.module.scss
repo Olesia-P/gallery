@@ -4,15 +4,18 @@ nav.Navbar {
     font-size: 1.5rem;
     background-color: rgb(166, 230, 255);
     padding: 1rem;
+    margin-bottom: 1rem;
 
-    .link {
-        padding: 0.5rem;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-        background-color: rgb(230, 226, 226);
-        border: 1px solid black;
-        margin: 0.5rem;
 
-    }
+}
+
+.link {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    background-color: rgb(230, 226, 226);
+    border: 1px solid black;
+    margin: 0.5rem;
+
 }

@@ -16,6 +16,9 @@ export default function Navbar({ postId = 365 }) {
       <Link href={`/activity/${postId}`}>
         <a className={css.link}>Posts</a>
       </Link>
+      <Link href={`/gallery`}>
+        <a className={css.link}>Gallery</a>
+      </Link>
     </nav>
   );
 }
