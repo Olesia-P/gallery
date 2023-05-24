@@ -10,20 +10,26 @@ export default function Picture({}) {
   const { pictures } = useContext(PictureContext);
 
   const renderObject = pictures.find((element) => element.id === pictureId);
-  const nextPictureId = pictureId + 1;
+
+  const nextPixture = (renderObject) => {
+    const renderObjectIndex = pictures.indexOf(renderObject);
+    const nextObjectIndex = renderObjectIndex + 1;
+    const lastIndex = pictures.length - 1;
+    const nextPictureId =
+      nextObjectIndex <= lastIndex ? pictures[nextObjectIndex].id : 0;
+    if (nextObjectIndex <= lastIndex) {
+      return nextPictureId;
+    }
+    if (nextObjectIndex > lastIndex || nextPictureId === 0) {
+      return pictures[0].id;
+    }
+  };
 
   return (
     <div>
-      {nextPictureId <= pictures.length && (
-        <Link href={`/gallery/${nextPictureId}`}>
-          <a className={css.link}>Next picture</a>
-        </Link>
-      )}
-      {(nextPictureId > pictures.length || nextPictureId === 0) && (
-        <Link href={`/gallery/1`}>
-          <a className={css.link}>Next picture</a>
-        </Link>
-      )}
+      <Link href={`/gallery/${nextPixture(renderObject)}`}>
+        <a className={css.link}>Next picture</a>
+      </Link>
 
       {renderObject !== undefined && (
         <div>
