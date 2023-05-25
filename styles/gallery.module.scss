@@ -1,0 +1,89 @@
+@import "variables";
+
+.animate.slide {
+    animation-name: animate-slide;
+    animation-duration: 0.5s;
+}
+
+@keyframes animate-slide {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.card {
+    margin: 3rem auto;
+    background-color: $white;
+    flex-direction: column;
+    align-items: center;
+    justify-items: space-evenly;
+    width: 17rem;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    border: 1px solid black;
+
+
+
+    .link {
+
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 20pt;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        border-radius: 0.3rem;
+        margin: 0.5rem;
+        transition: 1s;
+    }
+
+    .link:hover {
+
+        border: 1px solid rgb(0, 0, 0);
+        background-color: $light-pink;
+    }
+
+    .link:active {
+        background-color: $dark-pink;
+    }
+}
+
+.button {
+    font-weight: bold;
+    font-size: 16pt;
+    padding: 1rem 1.5rem;
+    margin: 2rem auto;
+    width: 10rem;
+    background-color: $grey;
+    color: $white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.7rem;
+    border: 1px solid black;
+    box-shadow: $shadow;
+    transition: 0.5s ease-in;
+
+}
+
+.button:hover {
+    filter: brightness(120%);
+}
+
+.img {
+    display: block;
+    max-width: 20rem;
+    margin: 2rem auto;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+}

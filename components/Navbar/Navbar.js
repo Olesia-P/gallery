@@ -1,25 +1,17 @@
-import Link from "next/link";
-import css from "./Navbar.module.scss";
+import css from "../../styles/navbar.module.scss";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
+import { useState } from "react";
+import HamburgerIcon from "./HamburgerIcon";
 
-export default function Navbar({ postId = 365 }) {
+export default function Navbar({}) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className={css.Navbar}>
-      <Link href="/">
-        <a className={css.link}>Home</a>
-      </Link>
-      <Link href="/about">
-        <a className={css.link}>About</a>
-      </Link>
-      <Link href="/activity">
-        <a className={css.link}>Activity</a>
-      </Link>
-      <Link href={`/activity/${postId}`}>
-        <a className={css.link}>Posts</a>
-      </Link>
-      <Link href={`/gallery`}>
-        <a className={css.link}>Gallery</a>
-      </Link>
-    </nav>
+    <div className={css.navbar}>
+      <DesktopNav />
+      {isOpen && <MobileNav setIsOpen={setIsOpen} />}
+      <HamburgerIcon isOpen={isOpen} setIsOpen={setIsOpen} />
+    </div>
   );
 }
 

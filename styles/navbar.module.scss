@@ -1,0 +1,10 @@
+@import "variables";
+
+.navbar {
+    font-size: 16pt;
+    font-weight: bolder;
+    background-color: $white;
+    box-shadow: $shadow;
+    height: 3.2rem;
+    width: 100%;
+}

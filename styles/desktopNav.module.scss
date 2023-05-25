@@ -1,0 +1,37 @@
+@import "variables";
+
+.desktopNav {
+    display: flex;
+    justify-content: center;
+    padding: 0.7rem;
+    font-size: 16pt;
+    font-weight: bolder;
+    background-color: $white;
+    box-shadow: $shadow;
+
+    .link {
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        color: black;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        border-radius: 0.3rem;
+        margin: 0 1rem;
+        transition: 1s;
+    }
+
+    .link:hover {
+        background-color: $light-pink;
+        border: 1px solid black;
+    }
+
+    .link:active {
+        background-color: $dark-pink;
+    }
+}
+
+@media (max-width: 500px) {
+    .desktopNav {
+        display: none;
+    }
+}

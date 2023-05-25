@@ -1,0 +1,19 @@
+@import "variables";
+
+.hamburgerIcon {
+    display: none;
+
+}
+
+@media (max-width: 500px) {
+    .hamburgerIcon {
+        display: flex;
+        position: fixed;
+        left: 2%;
+        top: 0.1rem;
+        padding: 0.3rem 0.3rem 0 0;
+        position: fixed;
+        left: 2%;
+        top: 0.1rem;
+    }
+}

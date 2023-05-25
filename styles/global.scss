@@ -1,7 +1,17 @@
-h1 {
-    text-align: center;
+@import "variables.scss";
+
+html {
+    height: 100%
 }
 
-h2 {
+body {
+    background: linear-gradient(109.6deg, $white 30.1%, $light-pink 100.2%);
+    font-size: 16pt;
+    margin: 0;
+}
+
+h1 {
     text-align: center;
+    // background-color: #ffc7c7;
+    ;
 }

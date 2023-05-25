@@ -2,7 +2,8 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import { PictureContext } from "../_app";
 import Link from "next/link";
-import css from "../../components/Navbar/Navbar.module.scss";
+import css from "../../styles/gallery.module.scss";
+import cx from "classnames";
 
 export default function Picture({}) {
   const router = useRouter();
@@ -28,13 +29,18 @@ export default function Picture({}) {
   return (
     <div>
       <Link href={`/gallery/${nextPixture(renderObject)}`}>
-        <a className={css.link}>Next picture</a>
+        <a className={css.button}>Next picture</a>
       </Link>
 
       {renderObject !== undefined && (
         <div>
           <h1>{renderObject.description}</h1>
-          <img src={renderObject.img} />
+          <img
+            src={renderObject.img}
+            className={cx(css.img, css.animate, css.slide)}
+            alt="picture"
+          />
+          <br />
         </div>
       )}
     </div>
