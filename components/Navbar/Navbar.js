@@ -1,8 +1,8 @@
-import css from "../../styles/navigation/navbar.module.scss";
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
+import css from "./navbar.module.scss";
+import DesktopNav from "../DesktopNav/DesktopNav";
+import MobileNav from "../MobileNav/MobileNav";
 import { useState } from "react";
-import HamburgerIcon from "./HamburgerIcon";
+import HamburgerIcon from "../HamburgerIcon/HamburgerIcon";
 
 export default function Navbar({}) {
   const [isOpen, setIsOpen] = useState(false);

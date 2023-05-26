@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import { PictureContext } from "../_app";
 import Link from "next/link";
-import Image from "next/image";
 import css from "../../styles/gallery.module.scss";
 import cx from "classnames";
 
@@ -37,13 +36,11 @@ export default function Picture({}) {
       {renderObject !== undefined && (
         <div>
           <h1>{renderObject.description}</h1>
-          <div className={css.imgContainer}>
-            <Image
+          <div>
+            <img
               src={renderObject.img}
-              className={cx(css.img, css.animate, css.slide)}
               alt="picture"
-              width={300}
-              height={300}
+              className={cx(css.img, css.animate, css.slide)}
             />
           </div>
           <br />

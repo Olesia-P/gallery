@@ -1,6 +1,6 @@
 import { CgMenuMotion, CgMenu } from "react-icons/cg";
 import cx from "classnames";
-import css from "../../styles/navigation/hamburgerIcon.module.scss";
+import css from "./hamburgerIcon.module.scss";
 
 export default function HamburgerIcon({ isOpen, setIsOpen }) {
   return (

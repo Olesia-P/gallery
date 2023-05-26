@@ -1,5 +1,5 @@
 import Link from "next/link";
-import css from "../../styles/navigation/desktopNav.module.scss";
+import css from "./desktopNav.module.scss";
 
 export default function DesktopNav() {
   return (

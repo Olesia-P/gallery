@@ -1,5 +1,5 @@
 import Link from "next/link";
-import css from "../../styles/navigation/mobileNav.module.scss";
+import css from "./mobileNav.module.scss";
 import cx from "classnames";
 
 export default function MobileNav({ setIsOpen }) {
