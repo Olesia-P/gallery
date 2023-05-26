@@ -1,4 +1,4 @@
-import css from "../../styles/navbar.module.scss";
+import css from "../../styles/navigation/navbar.module.scss";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { useState } from "react";

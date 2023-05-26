@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar/Navbar.js";
 import "../styles/global.scss";
-import css from "../styles/app.module.scss";
 import { createContext } from "react";
 
 export const PictureContext = createContext();
