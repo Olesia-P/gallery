@@ -1,15 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { PictureContext } from "../_app";
 import Link from "next/link";
 import css from "../../styles/gallery.module.scss";
+
 import cx from "classnames";
 
 export default function Picture({}) {
   const router = useRouter();
   const pictureId = parseInt(router.query.pictureId, 10);
   const { pictures } = useContext(PictureContext);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const renderObject = pictures.find((element) => element.id === pictureId);
 
@@ -27,6 +30,11 @@ export default function Picture({}) {
     }
   };
 
+  useEffect(() => {
+    setIsLoaded(false);
+    setTimeout(() => setIsLoaded(true), 200);
+  }, [router.asPath]);
+
   return (
     <div>
       <Link href={`/gallery/${nextPixture(renderObject)}`}>
@@ -40,7 +48,11 @@ export default function Picture({}) {
             <img
               src={renderObject.img}
               alt="picture"
-              className={cx(css.img, css.animate, css.slide)}
+              className={cx(
+                css.img,
+                isLoaded === true && css.animate,
+                css.slide
+              )}
             />
           </div>
           <br />
