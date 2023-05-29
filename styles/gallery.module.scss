@@ -3,7 +3,8 @@
 .animate.slide {
     animation-name: animate-slide;
     animation-duration: 0.5s;
-    animation-delay: 0.5s;
+
+    opacity: 1;
 }
 
 @keyframes animate-slide {
@@ -87,6 +88,6 @@
     border-radius: 1.5rem;
     box-shadow: $shadow;
     width: 20rem;
-
+    opacity: 0;
 
 }
