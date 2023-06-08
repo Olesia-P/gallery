@@ -35,8 +35,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
-      <Navbar />
       <PictureContext.Provider value={{ pictures }}>
+        <Navbar />
         <Component {...pageProps} />
       </PictureContext.Provider>
     </div>
